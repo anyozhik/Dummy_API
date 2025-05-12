@@ -1,0 +1,147 @@
+Method post for a user
+https://dummyapi.io/data/v1/user/create
+{'id': '68219e41e73add01a673e06b', 'firstName': 'Mary', 'lastName': 'Martin', 'gender': 'female', 'email': 'sarah73@example.com', 'registerDate': '2025-05-12T07:07:45.400Z', 'updatedDate': '2025-05-12T07:07:45.400Z'}
+200
+Successfully! Status code is 200
+['id', 'firstName', 'lastName', 'gender', 'email', 'registerDate', 'updatedDate']
+All fields are presented
+
+
+Method get after post for the user
+https://dummyapi.io/data/v1/user/68219e41e73add01a673e06b
+{'id': '68219e41e73add01a673e06b', 'firstName': 'Mary', 'lastName': 'Martin', 'gender': 'female', 'email': 'sarah73@example.com', 'registerDate': '2025-05-12T07:07:45.400Z', 'updatedDate': '2025-05-12T07:07:45.400Z'}
+200
+Successfully! Status code is 200
+
+
+Method put for the user
+https://dummyapi.io/data/v1/user/68219e41e73add01a673e06b
+{'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin', 'gender': 'female', 'email': 'sarah73@example.com', 'phone': '+7-980-555-6699', 'location': {'street': 'Lenina', 'city': 'Moscow', 'country': 'Russian Federation', 'timezone': '+7.00'}, 'registerDate': '2025-05-12T07:07:45.400Z', 'updatedDate': '2025-05-12T07:07:46.428Z'}
+200
+Successfully! Status code is 200
+Alla
+firstName is correct!
++7-980-555-6699
+phone is correct!
+Moscow
+city in location is correct!
+['id', 'firstName', 'lastName', 'gender', 'email', 'phone', 'location', 'registerDate', 'updatedDate']
+All fields are presented
+
+
+Method post for a new post
+https://dummyapi.io/data/v1/post/create
+{'id': '68219e42e73add404b73e079', 'image': '', 'likes': 13, 'link': '', 'tags': ['lifecoding', 'loveiseverywhere'], 'text': 'Life is cool!', 'publishDate': '2025-05-12T07:07:46.980Z', 'updatedDate': '2025-05-12T07:07:46.980Z', 'owner': {'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin'}}
+200
+Successfully! Status code is 200
+['id', 'image', 'likes', 'link', 'tags', 'text', 'publishDate', 'updatedDate', 'owner']
+All fields are presented
+Life is cool!
+text is correct!
+68219e41e73add01a673e06b
+id in owner is correct!
+
+
+Method get after post for the new post
+https://dummyapi.io/data/v1/post/68219e42e73add404b73e079
+{'id': '68219e42e73add404b73e079', 'image': '', 'likes': 13, 'link': '', 'tags': ['lifecoding', 'loveiseverywhere'], 'text': 'Life is cool!', 'publishDate': '2025-05-12T07:07:46.980Z', 'updatedDate': '2025-05-12T07:07:46.980Z', 'owner': {'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin'}}
+200
+Successfully! Status code is 200
+
+
+Method put for the new post
+https://dummyapi.io/data/v1/post/68219e42e73add404b73e079
+{'id': '68219e42e73add404b73e079', 'image': '', 'likes': 1313, 'link': '', 'tags': ['lifecoding', 'loveiseverywhere'], 'text': 'Life is cool!', 'publishDate': '2025-05-12T07:07:46.980Z', 'updatedDate': '2025-05-12T07:07:48.083Z', 'owner': {'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin'}}
+200
+Successfully! Status code is 200
+1313
+likes is correct!
+
+
+Method post for a new comment
+https://dummyapi.io/data/v1/comment/create
+{'id': '68219e44e73add367873e08d', 'message': 'how cool is that', 'owner': {'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin'}, 'post': '68219e42e73add404b73e079', 'publishDate': '2025-05-12T07:07:48.574Z'}
+200
+Successfully! Status code is 200
+['id', 'message', 'owner', 'post', 'publishDate']
+All fields are presented
+how cool is that
+message is correct!
+68219e41e73add01a673e06b
+id in owner is correct!
+68219e42e73add404b73e079
+post is correct!
+
+
+Method get for a comment using User id
+https://dummyapi.io/data/v1/user/68219e41e73add01a673e06b/comment
+{'data': [{'id': '68219e44e73add367873e08d', 'message': 'how cool is that', 'owner': {'id': '68219e41e73add01a673e06b', 'firstName': 'Alla', 'lastName': 'Martin'}, 'post': '68219e42e73add404b73e079', 'publishDate': '2025-05-12T07:07:48.574Z'}], 'total': 1, 'page': 0, 'limit': 20}
+200
+Successfully! Status code is 200
+68219e44e73add367873e08d
+id in data is correct!
+1
+total is correct!
+
+
+Method delete for the comment
+https://dummyapi.io/data/v1/comment/68219e44e73add367873e08d
+{'id': '68219e44e73add367873e08d'}
+200
+Successfully! Status code is 200
+['id']
+All fields are presented
+68219e44e73add367873e08d
+id is correct!
+
+
+Method get for a comment using User id
+https://dummyapi.io/data/v1/user/68219e41e73add01a673e06b/comment
+{'data': [], 'total': 0, 'page': 0, 'limit': 20}
+200
+Successfully! Status code is 200
+0
+total is correct!
+
+
+Method delete for the post
+https://dummyapi.io/data/v1/post/68219e42e73add404b73e079
+{'id': '68219e42e73add404b73e079'}
+200
+Successfully! Status code is 200
+['id']
+All fields are presented
+68219e42e73add404b73e079
+id is correct!
+
+
+Method get after delete for the post
+https://dummyapi.io/data/v1/post/68219e42e73add404b73e079
+{'error': 'RESOURCE_NOT_FOUND'}
+404
+Successfully! Status code is 404
+RESOURCE_NOT_FOUND
+error is correct!
+
+
+Method delete for the user
+https://dummyapi.io/data/v1/user/68219e41e73add01a673e06b
+{'id': '68219e41e73add01a673e06b'}
+200
+Successfully! Status code is 200
+['id']
+All fields are presented
+68219e41e73add01a673e06b
+id is correct!
+
+
+Method get after delete for the user
+https://dummyapi.io/data/v1/post/68219e41e73add01a673e06b
+{'error': 'RESOURCE_NOT_FOUND'}
+404
+Successfully! Status code is 404
+RESOURCE_NOT_FOUND
+error is correct!
+
+
+Testing of creating, updating and deleting a new user, a post and a comment has finished successfully.

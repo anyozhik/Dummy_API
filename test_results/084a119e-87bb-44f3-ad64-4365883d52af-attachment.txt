@@ -1,0 +1,7 @@
+Method get for the list of all users without authorization
+https://dummyapi.io/data/v1/user
+{'error': 'APP_ID_MISSING'}
+403
+Successfully! Status code is 403
+APP_ID_MISSING
+error is correct!
