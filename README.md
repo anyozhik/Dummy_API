@@ -5,4 +5,4 @@ It includes two test suites:
 -	a test for other endpoints that are included in the documentation.
 This project is created on the Python language using the Requests library.
 
-*Thank you for your time and consideration. Have a wonderful day  :smiley_cat:
+*Thank you for your time and consideration. Have a wonderful day*  :wink:
